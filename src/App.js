@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          So did this work.
+          I want my changes to track
         </p>
         <a
           className="App-link"
