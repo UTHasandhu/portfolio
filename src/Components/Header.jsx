@@ -1,8 +1,3 @@
-  // import './Footer.css';
-import input from 'bootstrap/dist/css/bootstrap.min.css';
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
-
-
 function Header() {
   return (
     <header class="py-3 mb-4 border-bottom">
