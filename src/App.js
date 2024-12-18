@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import ActionCard from './Components/ActionCard';
 
 function App() {
   return (
@@ -9,6 +10,13 @@ function App() {
       <Header />
       <header className="App-header">
         <p>
+        <div class="container text-center">
+            <div class="col-8">
+              <ActionCard />
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
           So no logo
         </p>
       </header>
