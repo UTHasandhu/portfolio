@@ -1,5 +1,7 @@
-/* img {
-    max-width: 10%;
+.homeimg {
+    max-width: 6vh;
     height: auto;
-    display: block;
-} */
+}
+.hometxt {
+    font-family: "Lexend Zetta";
+}

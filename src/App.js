@@ -4,21 +4,26 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import ActionCard from './Components/ActionCard';
 
+import cardData from './tempData/profileData'
+
 function App() {
   return (
     <div className="App">
       <Header />
       <header className="App-header">
-        <p>
-        <div class="container space-around">
-            <div class="col-4">
+        <div class="container-fluid">
+        <div className="row">
+        <div class="col-1"> </div>
+            <div class="col-3">
               <ActionCard />
             </div>
-            <div class="col-4">
+            <div class="col-3"> </div>
+            <div class="col-3">
+              <ActionCard />
             </div>
+            <div class="col-1"> </div>
+          </div>
         </div>
-          So no logo
-        </p>
       </header>
       <Footer />
     </div>
