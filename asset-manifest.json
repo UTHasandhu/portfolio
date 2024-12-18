@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f855e6bc.css",
-    "main.js": "/portfolio/static/js/main.afd39890.js",
+    "main.css": "/portfolio/static/css/main.83d58548.css",
+    "main.js": "/portfolio/static/js/main.12ad08b3.js",
     "static/js/488.9561f9b8.chunk.js": "/portfolio/static/js/488.9561f9b8.chunk.js",
-    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Sandhu_Harman.jpg": "/portfolio/static/media/Sandhu_Harman.506c1bb394cff6683754.jpg",
+    "static/media/c5_logo_decal.jpg": "/portfolio/static/media/c5_logo_decal.015b369dabdec53be545.jpg",
     "index.html": "/portfolio/index.html",
-    "main.f855e6bc.css.map": "/portfolio/static/css/main.f855e6bc.css.map",
-    "main.afd39890.js.map": "/portfolio/static/js/main.afd39890.js.map",
+    "main.83d58548.css.map": "/portfolio/static/css/main.83d58548.css.map",
+    "main.12ad08b3.js.map": "/portfolio/static/js/main.12ad08b3.js.map",
     "488.9561f9b8.chunk.js.map": "/portfolio/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.afd39890.js"
+    "static/css/main.83d58548.css",
+    "static/js/main.12ad08b3.js"
   ]
 }
