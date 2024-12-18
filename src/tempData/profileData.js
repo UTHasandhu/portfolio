@@ -48,7 +48,7 @@ const cardData = [
         ),
       },
       {
-        href: "https://goo.gl/maps/H7QEmYdCp68m53fF6",
+        href: "https://g.co/kgs/5n6gbyk",
         content: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
