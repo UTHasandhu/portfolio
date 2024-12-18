@@ -1,3 +1,5 @@
+
+
 function Footer() {
   return (
     <div class="container">
@@ -21,8 +23,6 @@ function Footer() {
             </ul>
         </footer>
     </div>
-
-
   );
 }
 
