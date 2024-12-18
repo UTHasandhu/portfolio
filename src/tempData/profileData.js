@@ -3,10 +3,10 @@ const cardData = [
   {
     imgSrc: require("../Media/Sandhu_Harman.jpg"),
     title: "Harman Sandhu",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    listItems: ["An item", "A second item", "A third item"],
+    text: "Spirited, but Inefficient",
+    listItems: ["UT CS Alum '24 ", "SDI @ Paycom '23 '24"],
     links: [
-      { href: "#", text: "Card link" },
+      { href: "https://www.linkedin.com/in/asdasfharmansandhu03/", text: "Card link" },
       { href: "#", text: "Another link" },
     ],
   },

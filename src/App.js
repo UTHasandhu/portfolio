@@ -15,11 +15,11 @@ function App() {
         <div className="row">
         <div class="col-1"> </div>
             <div class="col-3">
-              <ActionCard />
+              <ActionCard {...cardData[0]}/>
             </div>
             <div class="col-3"> </div>
             <div class="col-3">
-              <ActionCard />
+              <ActionCard {...cardData[1]}/>
             </div>
             <div class="col-1"> </div>
           </div>
