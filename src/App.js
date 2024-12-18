@@ -10,8 +10,8 @@ function App() {
       <Header />
       <header className="App-header">
         <p>
-        <div class="container text-center">
-            <div class="col-8">
+        <div class="container space-around">
+            <div class="col-4">
               <ActionCard />
             </div>
             <div class="col-4">
