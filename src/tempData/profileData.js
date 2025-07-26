@@ -3,8 +3,6 @@ const cardData = [
   {
     imgSrc: require("../Media/Sandhu_Harman.jpg"),
     title: "Harman Sandhu",
-    text: "Spirited, but Inefficient",
-    listItems: ["UT CS Alum '24 ", "SDI @ Paycom '23 '24"],
     links: [
       {
         href: "https://www.linkedin.com/in/asdasfharmansandhu03/",

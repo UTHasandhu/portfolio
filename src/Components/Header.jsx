@@ -1,41 +1,37 @@
 import "./Header.css";
-import corvette from "../Media/c5_logo_decal.jpg";
 
-function Header() {
+function Header({ ref }) {
   return (
-    <div className="container-xxl">
+    <div className="container-xxl" ref={ref}>
       <header className="d-flex flex-wrap justify-content-between align-items-end py-3 mb-4 border-bottom">
-        <a
-          href="/"
-          className="d-flex align-items-end mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-          aria-current="page"
-        >
-          <div className="p-2 g-col-6">
-            <img className="homeimg" src={corvette} />
-          </div>
-          <div className="p-2 g-col-6">
-            <h4 className="hometxt">HARMAN SANDHU</h4>
-          </div>
-        </a>
+
+        <div className="p-2 g-col-6 bg-black">
+          <h4 className="hometxt fw-bold text-white">HARMAN SANDHU</h4>
+        </div>
 
         <ul className="nav nav-pills align-items-end">
-          <li className="nav-item">
-            <a href="#" className="nav-link">
+          <li>
+            <a href="#About" className="nav-link">
               About
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Education & Experience
+          <li>
+            <a href="#Education" className="nav-link">
+              Education
+            </a>
+          </li>
+          <li>
+            <a href="#Experience" className="nav-link">
+              Experience
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a href="#Projects" className="nav-link">
               Projects
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a href="#ABout" className="nav-link">
               About
             </a>
           </li>
