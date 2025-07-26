@@ -1,0 +1,26 @@
+[
+  {
+    "season": "Fall",
+    "year": 2021,
+    "courses": [
+      {
+        "course": "C S 314",
+        "title": "DATA STRUCTURES",
+        "grade": "C",
+        "unique": "52645",
+        "type": "In residence",
+        "creditHours": 3.0,
+        "gradePoints": 6.0
+      },
+      {
+        "course": "C S 311",
+        "title": "DISCRETE MATH FOR COMPUTER SCI",
+        "grade": "B-",
+        "unique": "52480",
+        "type": "In residence",
+        "creditHours": 3.0,
+        "gradePoints": 8.01
+      }
+    ]
+  }
+]

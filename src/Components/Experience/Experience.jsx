@@ -7,7 +7,7 @@ export default function ExperiencePage() {
                 <div class="col-1"> </div>
                 <div class="col">
                     <h1>Experience</h1>
-                    <p>This is the experience page.</p>
+                    <p>     </p>
                 </div>
             </div>
         </div>

@@ -24,13 +24,13 @@ function App() {
         <div className='body-item'></div>
         <HomePage />
         <div className='body-item'></div>
-        <ExperiencePage />
-        <div className='body-item'></div>
+        {/* <ExperiencePage />
+        <div className='body-item'></div> */}
         <EducationPage />
-        <div className='body-item'></div>
+        {/* <div className='body-item'></div>
         <ProjectsPage />
         <div className='body-item'> are you even there? </div>
-        <Footer />
+        <Footer /> */}
         
       </div>
     </header>
