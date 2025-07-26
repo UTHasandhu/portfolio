@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8f1eaf5d.css",
-    "main.js": "/portfolio/static/js/main.a7b8404e.js",
+    "main.css": "/portfolio/static/css/main.5b011e7c.css",
+    "main.js": "/portfolio/static/js/main.4f279b08.js",
     "static/js/488.9561f9b8.chunk.js": "/portfolio/static/js/488.9561f9b8.chunk.js",
     "static/media/Sandhu_Harman.jpg": "/portfolio/static/media/Sandhu_Harman.506c1bb394cff6683754.jpg",
-    "static/media/c5_logo_decal.jpg": "/portfolio/static/media/c5_logo_decal.015b369dabdec53be545.jpg",
+    "static/media/UTSeal.png": "/portfolio/static/media/UTSeal.3242c874d0672e0291c6.png",
+    "static/media/Dev.png": "/portfolio/static/media/Dev.9b2e92c5341c8dbe7c29.png",
+    "static/media/Tools.png": "/portfolio/static/media/Tools.8fb65ca8a04fe1038f2e.png",
     "index.html": "/portfolio/index.html",
-    "main.8f1eaf5d.css.map": "/portfolio/static/css/main.8f1eaf5d.css.map",
-    "main.a7b8404e.js.map": "/portfolio/static/js/main.a7b8404e.js.map",
+    "main.5b011e7c.css.map": "/portfolio/static/css/main.5b011e7c.css.map",
+    "main.4f279b08.js.map": "/portfolio/static/js/main.4f279b08.js.map",
     "488.9561f9b8.chunk.js.map": "/portfolio/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f1eaf5d.css",
-    "static/js/main.a7b8404e.js"
+    "static/css/main.5b011e7c.css",
+    "static/js/main.4f279b08.js"
   ]
 }
