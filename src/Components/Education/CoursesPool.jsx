@@ -22,16 +22,26 @@ const tagColors = {
   project: "bg-danger"
 };
 
+// Utility function to group tags by type and sort them by frequency
+// Returns an object where keys are tag types and values are arrays of tag names sorted by frequency
 const groupTagsByType = (tags = []) => {
-  let arrTags = [];
+  const tagFrequency = {};
 
-  arrTags = tags.reduce((acc, tag) => {
-    if (!acc[tag.type]) acc[tag.type] = [];
-    acc[tag.type].push(tag.name);
-    return acc;
-  }, {});
+  tags.forEach(({ name, type }) => {
+    if (!tagFrequency[type]) tagFrequency[type] = {};
+    if (!tagFrequency[type][name]) tagFrequency[type][name] = 0;
+    tagFrequency[type][name]++;
+  });
 
-  return arrTags;
+  // Sort tags in each type by frequency, descending
+  const grouped = {};
+  for (const type in tagFrequency) {
+    grouped[type] = Object.entries(tagFrequency[type])
+      .sort((a, b) => b[1] - a[1]) // sort by frequency
+      .map(([name]) => name);      // just keep the tag name
+  }
+
+  return grouped;
 };
 
 export default function CoursesPool() {
@@ -46,7 +56,9 @@ export default function CoursesPool() {
   }, {});
 
   const allTags = transcriptData.flatMap((course) => course.tags || []);
+
   const groupedTags = groupTagsByType(allTags);
+  console.log("Here: ", groupedTags);
 
   const getTagColor = (type) => {
     return tagColors[type] || "bg-light text-dark";
@@ -58,23 +70,30 @@ export default function CoursesPool() {
 
       {/* Grouped Tag filter pills */}
       <div className="mb-5 container d-flex flex-wrap justify-content-center gap-4">
-        {Object.entries(groupedTags).map(([type, tags]) => (
-          <div key={type} className="d-flex flex-column align-items-center">
-            <span className={`badge mb-1 bg-white text-dark`}>{type}</span>
-            <div className="d-flex flex-row flex-wrap gap-2">
-              {Array.from(new Set(tags)).map((tag) => (
-                <span
-                  key={tag}
-                  className={`badge rounded-pill px-3 py-1 ${activeTag !== tag ? getTagColor(type) : "bg-secondary text-light"}`}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-                >
-                  {tag}
-                </span>
-              ))}
+        {Object.entries(groupedTags).sort((a, b) => {
+          // Sort by tag type length for better grouping
+          console.log("This is the log I need: A: ", a[1], ", B: ",  b[1]);
+          return b[1].length - a[1].length;
+        }).map(([type, tags]) => {
+          // console.log("Type: ", type, "Tags: ", tags);
+          return (
+            <div key={type} className="d-flex flex-column align-items-center">
+              <span className={`badge mb-1 bg-white text-dark`}>{type}</span>
+              <div className="d-flex flex-row flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className={`badge rounded-pill px-3 py-1 ${activeTag !== tag ? getTagColor(type) : "bg-secondary text-light"}`}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+      })}
       </div>
 
       {/* Year Cards by Label */}
