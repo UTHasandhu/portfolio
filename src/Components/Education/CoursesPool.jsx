@@ -23,11 +23,15 @@ const tagColors = {
 };
 
 const groupTagsByType = (tags = []) => {
-  return tags.reduce((acc, tag) => {
+  let arrTags = [];
+
+  arrTags = tags.reduce((acc, tag) => {
     if (!acc[tag.type]) acc[tag.type] = [];
     acc[tag.type].push(tag.name);
     return acc;
   }, {});
+
+  return arrTags;
 };
 
 export default function CoursesPool() {
@@ -45,7 +49,6 @@ export default function CoursesPool() {
   const groupedTags = groupTagsByType(allTags);
 
   const getTagColor = (type) => {
-    console.log("getTagColor called with type:", type);
     return tagColors[type] || "bg-light text-dark";
   };
 
@@ -85,16 +88,16 @@ export default function CoursesPool() {
             <div className="card-header bg-dark text-white rounded-top fw-bold" style={{ borderTopLeftRadius: "2rem", borderTopRightRadius: "2rem" }}>
               {label} Year
             </div>
-            <div className="card-body gap-3 justify-content-center">
+            <div className="card-body d-flex flex-column gap-1 justify-content-start">
               {courses
                 .filter((course) => !activeTag || course.tags?.some((t) => t.name === activeTag))
                 .map((course, idx) => (
                     <button
                     key={idx}
-                    className="btn btn-outline-primary rounded-pill px-3 py-1 m-1"
+                    className="btn btn-outline-secondary rounded-pill"
                       onClick={() => setSelectedCourse(course)}
                     >
-                      {course.courseName.split(" - ")[0]}
+                      {course.courseName.split(" - ")[1]}
                     </button>
                 ))}
             </div>

@@ -47,22 +47,27 @@
     "semester": "Spring 2023",
     "grade": "",
     "tags": [
-      { 
-        "name": "Agile", 
-        "type": "methodology" 
-      },
-      { 
-        "name": "Git", 
-        "type": "tool" 
-      },
-      { 
-        "name": "Jira", 
-        "type": "tool" 
-      },
-      { 
-        "name": "SWE", 
-        "type": "specialty" 
-      }
+      { "name": "Agile", "type": "methodology" },
+      { "name": "Git", "type": "tool" },
+      { "name": "Jira", "type": "tool" },
+      { "name": "Python", "type": "language" },
+      { "name": "Flask", "type": "language" },
+      { "name": "React", "type": "framework" },
+      { "name": "Docker", "type": "tool" },
+      { "name": "CI/CD", "type": "tool" },
+      { "name": "Web", "type": "specialty" },
+      { "name": "SWE", "type": "specialty" }
+    ]
+  },
+    {
+    "courseName": "C S 371p - Object-Oriented Programming",
+    "courseDescription": "Introduction to object-oriented programming concepts using Java, including classes, inheritance, and polymorphism.",
+    "semester": "Spring 2023",
+    "grade": "",
+    "tags": [
+      { "name": "C++", "type": "language" },
+      { "name": "OOP", "type": "specialty" },
+      { "name": "Core", "type": "specialty" }
     ]
   },
   {
@@ -75,7 +80,8 @@
       { "name": "Flask", "type": "framework" },
       { "name": "Docker", "type": "tool" },
       { "name": "CI/CD", "type": "tool" },
-      { "name": "Web", "type": "specialty" }
+      { "name": "Web", "type": "specialty" },
+      { "name": "SWE", "type": "specialty" }
     ]
   },
   {
@@ -84,18 +90,12 @@
     "semester": "Spring 2024",
     "grade": "",
     "tags": [
-      { 
-        "name": "Kotlin", 
-        "type": "language" 
-      },
-      { 
-        "name": "Android", 
-        "type": "platform" 
-      },
-      { 
-        "name": "SWE", 
-        "type": "specialty" 
-      }
+      { "name": "Kotlin", "type": "language" },
+      { "name": "Gradle", "type": "language" },
+      { "name": "Android", "type": "platform" },
+      { "name": "UI/UX", "type": "specialty" },
+      { "name": "Mobile", "type": "specialty"  },
+      { "name": "SWE", "type": "specialty" }
     ]
   },
   {
