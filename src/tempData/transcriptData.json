@@ -5,8 +5,7 @@
     "semester": "Fall 2021",
     "grade": "C",
     "tags": [
-      { "name": "Python", "type": "language" },
-      { "name": "SWE", "type": "specialty" },
+      { "name": "Java", "type": "language" },
       { "name": "Core", "type": "specialty" }
     ]
   },

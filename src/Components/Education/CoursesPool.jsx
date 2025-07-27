@@ -22,6 +22,14 @@ const tagColors = {
   project: "bg-danger"
 };
 
+const groupTagsByType = (tags = []) => {
+  return tags.reduce((acc, tag) => {
+    if (!acc[tag.type]) acc[tag.type] = [];
+    acc[tag.type].push(tag.name);
+    return acc;
+  }, {});
+};
+
 export default function CoursesPool() {
   const [activeTag, setActiveTag] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
@@ -33,34 +41,41 @@ export default function CoursesPool() {
     return acc;
   }, {});
 
-  const allTags = Array.from(
-    new Set(
-      transcriptData.flatMap((c) => c.tags?.map((t) => t.name) || [])
-    )
-  );
+  const allTags = transcriptData.flatMap((course) => course.tags || []);
+  const groupedTags = groupTagsByType(allTags);
 
-  const getTagColor = (type) => tagColors[type] || "bg-light text-dark";
+  const getTagColor = (type) => {
+    console.log("getTagColor called with type:", type);
+    return tagColors[type] || "bg-light text-dark";
+  };
 
   return (
     <div className="container-fluid">
       <h2 className="text-center mb-4">Relevant CS Coursework</h2>
 
-      {/* Tag filter pills */}
-      <div className="d-flex flex-wrap justify-content-center gap-2 mb-5">
-        {allTags.map((tag) => (
-          <span
-            key={tag}
-            className={`badge rounded-pill px-3 py-2 ${activeTag === tag ? "bg-primary text-white" : "bg-secondary text-light"}`}
-            style={{ cursor: "pointer" }}
-            onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-          >
-            {tag}
-          </span>
+      {/* Grouped Tag filter pills */}
+      <div className="mb-5 container d-flex flex-wrap justify-content-center gap-4">
+        {Object.entries(groupedTags).map(([type, tags]) => (
+          <div key={type} className="d-flex flex-column align-items-center">
+            <span className={`badge mb-1 bg-white text-dark`}>{type}</span>
+            <div className="d-flex flex-row flex-wrap gap-2">
+              {Array.from(new Set(tags)).map((tag) => (
+                <span
+                  key={tag}
+                  className={`badge rounded-pill px-3 py-1 ${activeTag !== tag ? getTagColor(type) : "bg-secondary text-light"}`}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
 
       {/* Year Cards by Label */}
-      <div className="d-flex flex-wrap justify-content-center gap-4">
+      <div className="d-flex justify-content-center gap-4 mb-5">
         {Object.entries(groupedByLabel).map(([label, courses]) => (
           <div
             key={label}
@@ -70,17 +85,17 @@ export default function CoursesPool() {
             <div className="card-header bg-dark text-white rounded-top fw-bold" style={{ borderTopLeftRadius: "2rem", borderTopRightRadius: "2rem" }}>
               {label} Year
             </div>
-            <div className="card-body d-flex flex-wrap gap-2 justify-content-center">
+            <div className="card-body gap-3 justify-content-center">
               {courses
                 .filter((course) => !activeTag || course.tags?.some((t) => t.name === activeTag))
                 .map((course, idx) => (
-                  <button
+                    <button
                     key={idx}
-                    className="btn btn-outline-primary rounded-pill px-3"
-                    onClick={() => setSelectedCourse(course)}
-                  >
-                    {course.courseName.split(" - ")[0]}
-                  </button>
+                    className="btn btn-outline-primary rounded-pill px-3 py-1 m-1"
+                      onClick={() => setSelectedCourse(course)}
+                    >
+                      {course.courseName.split(" - ")[0]}
+                    </button>
                 ))}
             </div>
           </div>
