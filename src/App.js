@@ -10,11 +10,14 @@ import ProjectsPage from './Components/Projects/Projects';
 function App() {
   const headerRef = useRef(null);
 
+  // Later feature set
   const scrollToTop = () => {
     if (headerRef.current) {
       headerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+
 
   return (
     <header className="App-header">

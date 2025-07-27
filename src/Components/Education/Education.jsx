@@ -1,14 +1,21 @@
 import React from "react";
+import CoursesPool from "./CoursesPool";
 
 export default function EducationPage() {
     return (
-        <div class="container-fluid">
+        <div class="container">
             <div className="row">
-                <div class="col-1"> </div>
                 <div class="col">
-                    <h1>Education Me</h1>
-                    <p>This is the education page.</p>
+                    <h1>Education</h1>
                 </div>
+                <div class="col-1"></div>
+            </div>
+            <div className="row">
+                <div class="col-1"></div>
+                <div class="col">
+                    <CoursesPool />
+                </div>
+                <div class="col-1"></div>
             </div>
         </div>
     );
