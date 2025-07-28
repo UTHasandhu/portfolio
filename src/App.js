@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+// App.jsx
+import React, { useRef, useState, useMemo } from 'react';
 import './App.css';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -6,35 +7,40 @@ import HomePage from './Components/Home/Home';
 import EducationPage from './Components/Education/Education';
 import ExperiencePage from './Components/Experience/Experience';
 import ProjectsPage from './Components/Projects/Projects';
+import SkillBar from './Components/SkillBar/SkillBar';
+import transcriptData from './tempData/transcriptData.json'; // Will eventually be merged with experience/projects tags
+import { groupTagsByType } from './Utils/SkillTagUtils';
 
 function App() {
   const headerRef = useRef(null);
+  const [activeTag, setActiveTag] = useState('');
 
-  // Later feature set
-  const scrollToTop = () => {
-    if (headerRef.current) {
-      headerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+  const allTags = useMemo(() => {
+    return transcriptData.flatMap(course => course.tags || []);
+  }, []);
 
-
+  const groupedTags = useMemo(() => groupTagsByType(allTags), [allTags]);
 
   return (
     <header className="App-header">
-      <div className="App" class = "container row-gap-3">
+      <div className="container row-gap-3">
         <div className='body-item'></div>
         <Header ref={headerRef} />
         <div className='body-item'></div>
         <HomePage />
         <div className='body-item'></div>
-        <ExperiencePage />
+
+        {/* Global Tag Filter */}
+        <SkillBar groupedTags={groupedTags} activeTag={activeTag} setActiveTag={setActiveTag} />
+
         <div className='body-item'></div>
-        <EducationPage />
+        <ExperiencePage activeTag={activeTag} />
         <div className='body-item'></div>
-        <ProjectsPage />
-        <div className='body-item'> are you even there? </div>
+        <EducationPage activeTag={activeTag} />
+        <div className='body-item'></div>
+        <ProjectsPage activeTag={activeTag} />
+        <div className='body-item'></div>
         <Footer />
-        
       </div>
     </header>
   );

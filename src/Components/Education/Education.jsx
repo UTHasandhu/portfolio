@@ -1,21 +1,20 @@
-import React from "react";
-import CoursesPool from "./CoursesPool";
+import Semesters from "./Semesters";
 
-export default function EducationPage() {
+export default function EducationPage({ activeTag }) {
     return (
-        <div class="container">
+        <div className="container">
             <div className="row">
-                <div class="col">
+                <div className="col">
                     <h1>Education</h1>
                 </div>
-                <div class="col-1"></div>
+                <div className="col-1"></div>
             </div>
             <div className="row">
-                <div class="col-1"></div>
-                <div class="col">
-                    <CoursesPool />
+                <div className="col-1"></div>
+                <div className="col">
+                    <Semesters activeTag={activeTag} />
                 </div>
-                <div class="col-1"></div>
+                <div className="col-1"></div>
             </div>
         </div>
     );

@@ -72,7 +72,6 @@ export default function CoursesPool() {
       <div className="mb-5 container d-flex flex-wrap justify-content-center gap-4">
         {Object.entries(groupedTags).sort((a, b) => {
           // Sort by tag type length for better grouping
-          console.log("This is the log I need: A: ", a[1], ", B: ",  b[1]);
           return b[1].length - a[1].length;
         }).map(([type, tags]) => {
           // console.log("Type: ", type, "Tags: ", tags);
