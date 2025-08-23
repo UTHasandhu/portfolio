@@ -1,0 +1,126 @@
+[
+  {
+    "courseName": "C S 314 - Data Structures",
+    "courseDescription": "Study of data structures including lists, stacks, queues, trees, and graphs.",
+    "semester": "Fall 2021",
+    "tags": [
+      { "name": "Java", "type": "language" },
+      { "name": "Core", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 311 - Discrete Math for CS",
+    "courseDescription": "Mathematical foundations for computer science including logic, proofs, and combinatorics.",
+    "semester": "Fall 2021",
+    "tags": [
+      { "name": "Math", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 429 - Computer Organization and Architecture",
+    "courseDescription": "Assembly language, memory hierarchies, pipelining, and digital design fundamentals.",
+    "semester": "Spring 2022",
+    "tags": [
+      { "name": "C", "type": "language" },
+      { "name": "Systems", "type": "specialty" },
+      { "name": "Core", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 439 - Principles of Computer Systems",
+    "courseDescription": "Operating system concepts including processes, threads, synchronization, and file systems.",
+    "semester": "Fall 2022",
+    "tags": [
+      { "name": "C", "type": "language" },
+      { "name": "Systems", "type": "specialty" },
+      { "name": "Core", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 373 - Software Engineering",
+    "courseDescription": "Principles and practices of software development using team-based design and iterative development.",
+    "semester": "Spring 2023",
+    "tags": [
+      { "name": "Agile", "type": "methodology" },
+      { "name": "Git", "type": "tool" },
+      { "name": "Jira", "type": "tool" },
+      { "name": "Python", "type": "language" },
+      { "name": "Flask", "type": "language" },
+      { "name": "React", "type": "framework" },
+      { "name": "Docker", "type": "tool" },
+      { "name": "CI/CD", "type": "tool" },
+      { "name": "SWE", "type": "specialty" }
+    ]
+  },
+    {
+    "courseName": "C S 371p - Object-Oriented Programming",
+    "courseDescription": "Introduction to object-oriented programming concepts using Java, including classes, inheritance, and polymorphism.",
+    "semester": "Spring 2023",
+    "tags": [
+      { "name": "C++", "type": "language" },
+      { "name": "OOP", "type": "specialty" },
+      { "name": "Core", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 378 - Modern Web Applications",
+    "courseDescription": "Development of dynamic full-stack web applications using frontend and backend frameworks.",
+    "semester": "Fall 2023",
+    "tags": [
+      { "name": "React", "type": "framework" },
+      { "name": "Flask", "type": "framework" },
+      { "name": "Docker", "type": "tool" },
+      { "name": "CI/CD", "type": "tool" },
+      { "name": "SWE", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 371M - Mobile Computing",
+    "courseDescription": "Design of applications for smartphones, using sensors, context-awareness, and responsive UI.",
+    "semester": "Spring 2024",
+    "tags": [
+      { "name": "Kotlin", "type": "language" },
+      { "name": "Android", "type": "platform" },
+      { "name": "UI/UX", "type": "specialty" },
+      { "name": "Mobile", "type": "specialty"  },
+      { "name": "SWE", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 378 - Cloud Computing",
+    "courseDescription": "Core cloud concepts, serverless apps, microservices, CI/CD, and infrastructure-as-code.",
+    "semester": "Spring 2024",
+    "tags": [
+      { "name": "AWS", "type": "cloud" },
+      { "name": "EC2", "type": "service" },
+      { "name": "S3", "type": "service" },
+      { "name": "Docker", "type": "tool" },
+      { "name": "CI/CD", "type": "tool" }
+    ]
+  },
+  {
+    "courseName": "C S 364M - Principles of Machine Learning II",
+    "courseDescription": "Supervised/unsupervised learning, deep learning, optimization, and evaluation strategies.",
+    "semester": "Spring 2024",
+    "tags": [
+      { "name": "Python", "type": "language" },
+      { "name": "scikit-learn", "type": "library" },
+      { "name": "AI", "type": "specialty" },
+      { "name": "ML", "type": "specialty" }
+    ]
+  },
+  {
+    "courseName": "C S 378 - Modern Web Applications",
+    "courseDescription": "Development of full-stack modern web applications using frontend/backend frameworks and cloud tools.",
+    "semester": "Fall 2023",
+    "grade": "A",
+    "tags": [
+      { "name": "React", "type": "framework" },
+      { "name": "Flask", "type": "framework" },
+      { "name": "Docker", "type": "tool" },
+      { "name": "CI/CD", "type": "tool" },
+      { "name": "AWS", "type": "cloud" },
+      { "name": "SWE", "type": "specialty" }
+    ]
+  }
+]

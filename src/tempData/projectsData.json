@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Real-Time Device Health Streaming Service",
+    "description": "Developed a .NET gRPC service with Kafka and MySQL to stream IoT telemetry in real time, integrated Python-based anomaly detection, and delivered data via WebSocket dashboards.",
+    "tags": [
+      { "name": ".NET", "type": "framework" },
+      { "name": "gRPC", "type": "api" },
+      { "name": "Kafka", "type": "framework" },
+      { "name": "MySQL", "type": "database" },
+      { "name": "Python", "type": "language" },
+      { "name": "WebSockets", "type": "api" }
+    ]
+  },
+  {
+    "title": "UI Library with Accessibility Insights",
+    "description": "Built a React-based WCAG-compliant UI library with a live sandbox, screen reader simulation, dynamic type scaling, and the ability to export components for integration.",
+    "tags": [
+      { "name": "React", "type": "framework" },
+      { "name": "Accessibility", "type": "specialty" },
+      { "name": "UI/UX", "type": "specialty" }
+    ]
+  },
+  {
+    "title": "Real-time Network QoS Model",
+    "description": "A machine learning model that classifies live router traffic to dynamically boost bandwidth for high-priority activities like gaming and downloads, using Wireshark for packet capture and scikit-learn for training.",
+    "tags": [
+      { "name": "Python", "type": "language" },
+      { "name": "Scikit-Learn", "type": "library" },
+      { "name": "ML", "type": "specialty" },
+      { "name": "Networking", "type": "specialty" }
+    ]
+  },
+  {
+    "title": "Pokémon Sleep Companion App",
+    "description": "An android app that lets you easily create and organize your teams for the Pokémon Sleep mobile game using Kotlin, Express.js, and MongoDB.",
+    "tags": [
+      { "name": "Kotlin", "type": "language" },
+      { "name": "Android", "type": "platform" },
+      { "name": "Express.js", "type": "framework" },
+      { "name": "MongoDB", "type": "database" }
+    ]
+  },
+  {
+    "title": "Weather Forecast Website",
+    "description": "A full-stack web app to show the weather forecast using DynamoDB, Flask, and React. Practiced CI/CD using Jenkins running on Kubernetes clusters and deployed onto EC2.",
+    "tags": [
+      { "name": "React", "type": "framework" },
+      { "name": "Flask", "type": "framework" },
+      { "name": "DynamoDB", "type": "database" },
+      { "name": "CI/CD", "type": "tool" },
+      { "name": "Jenkins", "type": "tool" },
+      { "name": "Kubernetes", "type": "tool" },
+      { "name": "AWS", "type": "cloud" }
+    ]
+  }
+]
