@@ -65,7 +65,6 @@ export default function Semesters({activeTag}) {
 
   return (
     <div className="container-fluid">
-      <h2 className="text-center mb-4">Relevant CS Coursework</h2>
 
       {/* Year Cards by Label */}
       <div className="d-flex justify-content-center gap-4 mb-5">

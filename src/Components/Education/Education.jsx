@@ -4,10 +4,9 @@ export default function EducationPage({ activeTag }) {
     return (
         <div className="container">
             <div className="row">
-                <div className="col">
+                <div className="col text-center mb-4">
                     <h1>Education</h1>
                 </div>
-                <div className="col-1"></div>
             </div>
             <div className="row">
                 <div className="col-1"></div>

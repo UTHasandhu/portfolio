@@ -28,8 +28,8 @@ function ActionCard({ imgSrc, title, text, listItems, links }) {
             {link.content || link.text || extractDomain(link.href)}
           </a>
         ))}
-        <hr/> 
-        <div className="d-flex gap-3 justify-content-center">
+        {/* <hr/>  */}
+        {/* <div className="d-flex gap-3 justify-content-center">
           <a
             href="/resume.pdf"
             className="btn btn-dark"
@@ -40,7 +40,7 @@ function ActionCard({ imgSrc, title, text, listItems, links }) {
           <a href="#contact" className="btn btn-outline-secondary">
             Contact Me
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
