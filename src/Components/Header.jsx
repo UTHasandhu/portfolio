@@ -9,7 +9,7 @@ function Header({ ref }) {
           <h4 className="hometxt fw-bold text-white">HARMAN SANDHU</h4>
         </div>
 
-        <ul className="nav nav-pills align-items-end">
+        {/* <ul className="nav nav-pills align-items-end">
           <li>
             <a href="#About" className="nav-link">
               About
@@ -35,7 +35,7 @@ function Header({ ref }) {
               About
             </a>
           </li>
-        </ul>
+        </ul> */}
       </header>
     </div>
   );
