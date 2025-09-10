@@ -1,8 +1,12 @@
 .timeline {
   margin: 0 auto;
   position: relative;
+  background-color: rgba(0, 0, 80, 0.05); /* subtle dark blue */
+  border-radius: 1rem; /* optional: gives softer edges */
+  padding: 2rem; /* gives breathing room */
   width: 90%;
 }
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -10,7 +14,6 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #dee2e6;
   transform: translateX(-50%);
 }
 .timeline-item {

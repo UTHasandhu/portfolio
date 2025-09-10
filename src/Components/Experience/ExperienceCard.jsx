@@ -24,8 +24,12 @@ export default function ExperienceCard({ exp, index }) {
       <div className="col-6">
         <div
           className="card shadow-sm border-0"
-          style={{ borderRadius: "1.5rem" }}
+          style={{
+            borderRadius: "1.5rem",
+            background: index % 2 === 0 ? "#f0f8ff" : "#e6f0ff" // alternating soft blues
+          }}
         >
+
           <div className="card-body">
             <h5 className="card-title fw-bold">
               {exp.title} @ {exp.company}
