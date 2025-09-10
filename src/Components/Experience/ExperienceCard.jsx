@@ -12,25 +12,20 @@ const tagColors = {
 
 export default function ExperienceCard({ exp, index }) {
   const [showModal, setShowModal] = useState(false);
+  const isRight = index % 2 === 0; // true -> render on the right (flex-row-reverse)
 
   const getTagColor = (type) => tagColors[type] || "bg-light text-dark";
 
   return (
     <div
-      className={`timeline-item d-flex mb-5 ${
-        index % 2 === 0 ? "flex-row-reverse" : ""
-      }`}
+      className={`timeline-item d-flex mb-5 ${isRight ? "flex-row-reverse" : ""}`}
     >
-      <div className="col-6">
+      <div className={`col-6 ${isRight ? "right" : "left"}`}>
         <div
-          className="card shadow-sm border-0"
-          style={{
-            borderRadius: "1.5rem",
-            background: index % 2 === 0 ? "#f0f8ff" : "#e6f0ff" // alternating soft blues
-          }}
+          className={`card shadow-sm border-0 ${isRight ? "card-right" : "card-left"}`}
+          style={{ borderRadius: "1.5rem" }}
         >
-
-          <div className="card-body">
+          <div className={`card-body ${isRight ? "right" : "left"}`}>
             <h5 className="card-title fw-bold">
               {exp.title} @ {exp.company}
             </h5>
@@ -38,6 +33,7 @@ export default function ExperienceCard({ exp, index }) {
               {exp.startDate} – {exp.endDate} | {exp.location}
             </h6>
             <p className="card-text">{exp.description}</p>
+
             <div className="d-flex flex-wrap gap-2 mt-2">
               {exp.tags?.map((tag, i) => (
                 <span
@@ -48,6 +44,7 @@ export default function ExperienceCard({ exp, index }) {
                 </span>
               ))}
             </div>
+
             <button
               className="btn btn-outline-dark btn-sm mt-3 rounded-pill"
               onClick={() => setShowModal(true)}
@@ -58,7 +55,7 @@ export default function ExperienceCard({ exp, index }) {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal unchanged */}
       {showModal && (
         <div
           className="modal fade show d-block"

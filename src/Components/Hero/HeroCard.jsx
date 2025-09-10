@@ -8,7 +8,7 @@ import mediaPic from '../../Media/Dev.png';
 
 export default function HeroCard() {
   return (
-    <section className="bg-light py-3">
+    <section className="py-3">
       <div className="container">
         <div className="row align-items-center justify-content-center g-5">
           {/* Profile Card */}

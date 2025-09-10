@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import experienceData from "../../tempData/experienceData.json";
 import ExperienceCard from "./ExperienceCard";
+import "./Experience.css";
 
 export default function ExperiencePage({ activeTag }) {
   return (

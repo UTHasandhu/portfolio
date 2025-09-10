@@ -1,12 +1,15 @@
+/* ExperiencePage.css - place next to ExperiencePage.jsx and import it */
 .timeline {
   margin: 0 auto;
   position: relative;
-  background-color: rgba(0, 0, 80, 0.05); /* subtle dark blue */
-  border-radius: 1rem; /* optional: gives softer edges */
-  padding: 2rem; /* gives breathing room */
+  background-color: rgba(2,46,84,0.06); /* faint dark-blue tint */
+  border-radius: 1rem;
+  padding: 2rem;                /* make the timeline visible around cards */
   width: 90%;
+  box-sizing: border-box;
 }
 
+/* vertical center line */
 .timeline::before {
   content: "";
   position: absolute;
@@ -15,25 +18,71 @@
   bottom: 0;
   width: 4px;
   transform: translateX(-50%);
+  background: rgba(11,59,102,0.18);
+  border-radius: 2px;
 }
+
+/* timeline item */
 .timeline-item {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
+  width: 100%;
+  gap: 1rem;
 }
+
+/* dot on the line */
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: #212529;
+  width: 18px;
+  height: 18px;
+  background: #0b3b66;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
+  box-shadow: 0 0 0 6px rgba(11,59,102,0.06);
 }
+
+/* make card column half width so timeline bg shows either side */
 .timeline-item .col-6 {
-  padding: 1rem;
+  max-width: 50%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+/* push left / right cards away from center so the timeline tint is visible */
+.timeline-item .col-6.left {
+  margin-right: calc(50% - 3.5rem);
+}
+.timeline-item .col-6.right {
+  margin-left: calc(50% - 3.5rem);
+}
+
+/* card backgrounds for subtle flavor */
+.card-left {
+  background: linear-gradient(135deg, rgba(229,246,255,0.95), rgba(245,253,255,0.95));
+}
+.card-right {
+  background: linear-gradient(135deg, rgba(255,248,230,0.97), rgba(255,255,255,0.97));
+}
+
+/* text alignment inside cards */
+.card-body.left { text-align: left; }
+.card-body.right { text-align: right; }
+
+/* badges and button alignment */
+.card-body.left .d-flex.flex-wrap { justify-content: flex-start; }
+.card-body.right .d-flex.flex-wrap { justify-content: flex-end; }
+.card-body.right .btn { margin-left: auto; }
+
+/* small-screen fallback: stack items and center */
+@media (max-width: 767px) {
+  .timeline::before { left: 8px; transform: none; } /* move line to the left on small screens */
+  .timeline-item { padding-left: 40px; }
+  .timeline-item .col-6 { max-width: 100%; margin: 0; }
+  .card-body.left, .card-body.right { text-align: left; }
+  .timeline-item::before { left: 24px; }
 }
