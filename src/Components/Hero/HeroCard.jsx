@@ -6,7 +6,7 @@ import UTSeal from '../../Media/UTSeal.png';
 import Tools from  '../../Media/Tools.png';
 import mediaPic from '../../Media/Dev.png';
 
-export default function HomePage() {
+export default function HeroCard() {
   return (
     <section className="bg-light py-3">
       <div className="container">

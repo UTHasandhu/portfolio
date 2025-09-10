@@ -3,7 +3,7 @@ import React, { useRef, useState, useMemo } from 'react';
 import './App.css';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import HomePage from './Components/Home/Home';
+import HeroPage from './Components/Hero/HeroCard';
 import EducationPage from './Components/Education/Education';
 import ExperiencePage from './Components/Experience/Experience';
 import ProjectsPage from './Components/Projects/Projects';
@@ -27,7 +27,7 @@ function App() {
         <div className='body-item'></div>
         <Header ref={headerRef} />
         <div className='body-item'></div>
-        <HomePage />
+        <HeroPage />
         <div className='body-item'></div>
 
         {/* Global Tag Filter */}
